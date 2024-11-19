@@ -1,6 +1,10 @@
 <app-header></app-header>
 <div class="list-group container mt-4" *ngIf="albums">
-  <a class="list-group-item list-group-item-action" *ngFor="let a of albums">
+  <a
+    class="list-group-item list-group-item-action"
+    *ngFor="let a of albums"
+    [routerLink]="['/albumId', a.id, 'photos']"
+  >
     {{ a.title }}
   </a>
 </div>
